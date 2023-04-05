@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <style>
+      /* Initial state of the page */
+      body {
+        opacity: 0;
+      }
+      
+      /* Fade in animation */
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        
+        to {
+          opacity: 1;
+        }
+      }
+      
+      /* Apply the animation to the body */
+      body {
+        animation: fade-in 1s ease-in-out forwards;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <!-- Rest of the website content goes here -->
+    
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Da stuff</title>
+    <style>
+      /* Header styles */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: #333;
+        color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      
+      /* Logo styles */
+      .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #fff;
+      }
+      
+      /* Navigation styles */
+      nav {
+        display: flex;
+        gap: 1rem;
+      }
+      
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        transition: background-color 0.3s ease-in-out;
+      }
+      
+      nav a:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">My Website</div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    
+    <!-- Rest of the website content goes here -->
+    
+  </body>
+</html>
+
+
+<html>
+<head>
+	<title>Ice Cream Delight</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #AAAAAA;
+			font-family: Arial, sans-serif;
+		}
+		
+		header {
+			background-color: #D2042D;
+			box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+			padding: 20px;
+			text-align: center;
+		}
+		
+		h1 {
+			font-size: 48px;
+			color: #333;
+			margin: 0;
+		}
+		
+		main {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: center;
+		}
+		
+		.card {
+			background-color: #fff;
+			box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+			margin: 20px;
+			width: 300px;
+			height: 400px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			transition: transform 0.2s ease-in-out;
+		}
+		
+
+
+		
+		.card:hover {
+			transform: translateY(-5px);
+		}
+		
+		.card img {
+			max-width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+		
+		.card h2 {
+			font-size: 24px;
+			color: #333;
+			margin: 20px 0 0 0;
+			text-align: center;
+		}
+		
+		.card p {
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 10px;
+			text-align: center;
+		}
+		
+		.card button {
+			background-color: #333;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.2s ease-in-out;
+		}
+		
+		.card button:hover {
+			background-color: #F0E68C;
+			color: #333;
+		}
+		
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		
+		.fa {
+			font-size: 24px;
+			margin: 0 10px;
+			cursor: pointer;
+		}
+	</style>
+	
+</head>
+
+
+
+<body>
+	<header>
+		<h1>Ice Cream Delight</h1>
+	</header>
+	
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Photo Gallery</title>
+    <style>
+      /* Style the container for the photos */
+      .photo-container {
+        width: 600px;
+        height: 400px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      /* Style the individual photos */
+      .photo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+      /* Style the active photo */
+      .photo.active {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="photo-container">
+      <img class="photo active" src="skandafriend.jpg" alt="Photo 1">
+      <img class="photo" src="skandavasuki_tesla_model_3_racing.png" alt="Photo 2">
+      <img class="photo" src="skandafriend.jpg" alt="Photo 3">
+    </div>
+    <script>
+      // Get all the photos in the photo container
+      const photos = document.querySelectorAll('.photo-container img');
+      let currentPhotoIndex = 0;
+
+      // Shuffle the photos every 5 seconds
+      setInterval(() => {
+        // Hide the current photo
+        photos[currentPhotoIndex].classList.remove('active');
+
+        // Increment the index, wrapping around to 0 if necessary
+        currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
+
+        // Show the new current photo
+        photos[currentPhotoIndex].classList.add('active');
+      }, 5000);
+    </script>
+  </body>
+</html>
+	
+	<main>
+		<div class="card">
+			<img src="https://via.placeholder.com/200x200.png?text=Flavor+Name" alt="Flavor Name">
+			<h2>Flavor Name</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae ligula quam. </p>
+			<button>Add to Cart</button>
+		</div>
+		
+		
+		<div class="card">
+			<img src="https://via.placeholder.com/200x200.png?text=Flavor+Name" alt="Flavor Name">
+			<h2>Flavor Name</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae ligula quam. </p>
+			<button onclick="location.href='https://onemileatatime.com/?s=Uzbekistan&format=reviews';"> Add to Cart</button>
+		</div>
+		
+		<div class="card">
+			<img src="https://via.placeholder.com/200x200.png?text=Flavor+Name" alt="Flavor Name">
+			<h2>Flavor Name</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae ligula quam. </p>
+			<button>Add to Cart</button>
+		</div>
+		
+		<div class="card">
+			<img src="https://via.placeholder.com/200x200.png?text=Flavor+Name" alt="Flavor Name">
+			<h2>Flavor Name</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae ligula quam. </p>
+			<button>Add to Cart</button>
+		</div>
+		
+
+</main>
+
+
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <style>
+      /* Footer styles */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+      }
+      
+      /* Contact section styles */
+      .contact {
+        flex-basis: 100%;
+        margin-bottom: 2rem;
+      }
+      
+      .contact h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      
+      .contact p {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .contact a {
+        color: #fff;
+        text-decoration: none;
+      }
+      
+      /* Social media section styles */
+      .social-media {
+        display: flex;
+        gap: 1rem;
+      }
+      
+      .social-media a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        color: #333;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        text-decoration: none;
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      .social-media a:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+  
+    <!-- Rest of the website content goes here -->
+    
+    <footer>
+      <div class="contact">
+        <h2>Contact Us</h2>
+        <p>123 Main Street</p>
+        <p>Anytown, USA 12345</p>
+        <p><a href="tel:+1-555-123-4567">+1 (555) 123-4567</a></p>
+        <p><a href="mailto:info@example.com">info@example.com</a></p>
+      </div>
+      
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </footer>
+    
+  </body>
+
+</html>
+
+
